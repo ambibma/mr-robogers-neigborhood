@@ -22,10 +22,10 @@ function stringConvert(stringNumber) {
 // output: [x,x ,x ,x ,x ,5]
 // shift all numbers <5 from the begining
 
-function stringArrayConvert(stringNumber) { // stringValue =5
-  let outputArray = []; // array = [0]
+function stringArrayConvert(stringNumber) { 
+  let outputArray = []; 
   let stringArray = stringConvert(stringNumber);
-  for (i = 0; i<=stringArray; i += 1) {  // i=1; i<=5; i++
+  for (i = 0; i<=stringArray; i += 1) { 
     outputArray.push(i);
   }
   return outputArray;
