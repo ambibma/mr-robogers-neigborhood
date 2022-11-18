@@ -25,6 +25,10 @@ where all digits that contain a 1, are replaced with "Beep".
 All Numbers that contain 2 will be replaced with "Boop!" 
 All numbers that contain a 3 are replaced with "Won't you be my neighbor"
 
+Describe: stringArrayConvert(stringNumber)
+test: It should take the primitive value from user inputted string
+code: stringArrayConvert("5")
+Expected Output: (5)
 
 Describe: stringArrayConvert(stringNumber)
 Test: It should return user's inputted number into an organized string array starting from 0 all the way to the user's inputted number.
