@@ -4,7 +4,7 @@
 // Expected Output: (5)
 
 function stringConvert(stringNumber) {
-  const stringValue = parseInt(stringNumber);
+  let stringValue = parseInt(stringNumber);
   console.log(stringValue);
   return stringValue;
 }
@@ -22,14 +22,13 @@ function stringConvert(stringNumber) {
 // output: [x,x ,x ,x ,x ,5]
 // shift all numbers <5 from the begining
 
-function stringArrayConvert(stringValue) { // stringValue =5
-  let arrayZero = [0]; // array = [0]
-  let arrayCounter = arrayZero.push(stringValue) // [0, 5]
-  let placeholder = 0 // placeholder =0
-  for (let i = 0; i<=arrayCounter.length -1; i += 1){  // i=1; i<=5; i++
-    arrayCounter.push(placeholder[i]++);
-    return arrayCounter;
+function stringArrayConvert(stringNumber) { // stringValue =5
+  let outputArray = []; // array = [0]
+  let stringArray = stringConvert(stringNumber);
+  for (i = 0; i<=stringArray; i += 1) {  // i=1; i<=5; i++
+    outputArray.push(i);
   }
+  return outputArray;
 }
 
 // Describe: specialNums(numArray)
