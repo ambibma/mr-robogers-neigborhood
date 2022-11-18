@@ -18,23 +18,34 @@ function stringConvert(stringNumber) {
 // code: stringArrayConvert("5");
 // Expected Output: [0,1,2,3,4,5]
 
-// Input: 5
-// output: [x,x ,x ,x ,x ,5]
-// shift all numbers <5 from the begining
-
 function stringArrayConvert(stringNumber) { 
-  let outputArray = []; 
-  let stringArray = stringConvert(stringNumber);
-  for (i = 0; i<=stringArray; i += 1) { 
-    outputArray.push(i);
+  let stringArray = []; 
+  let stringToNum = stringConvert(stringNumber);
+  for (i = 0; i<=stringToNum; i += 1) { 
+    stringArray.push(i);
   }
-  return outputArray;
+  return stringArray;
 }
 
 // Describe: specialNums(numArray)
 // test: It should return all digits containing 1s,2s and 3s 
 // code: specialNums([1,2,3,4,5]);
 // Expected Output: [1,2,3];
+
+
+function specialNums(stringNumber){
+  let stringArray = stringArrayConvert(stringNumber);
+  if (stringArray.includes(3, -1) === true ) {
+    for (i=(stringArray.length -2); i>0; i-=1 ){
+      stringArray.push("Won't you be my neighbor? ");
+     return stringArray
+      
+   }else (stringArray.includes(2,-1) === true) { 
+    for (i=(stringArray.length -2; i>0; i-=1)){
+
+    }
+  }
+}
 
 // test: It should return all digits containing 13, 12, 23, 21
 // code: specialNums([0,1,2,3,4,5,6,7,8,9,10,12,13...23]);
