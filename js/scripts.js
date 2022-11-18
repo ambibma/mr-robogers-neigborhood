@@ -23,11 +23,12 @@ function stringConvert(stringNumber) {
 // shift all numbers <5 from the begining
 
 function stringArrayConvert(stringValue) { // stringValue =5
-  let array = [0]; // array = [0]
+  let arrayZero = [0]; // array = [0]
+  let arrayCounter = arrayZero.push(stringValue) // [0, 5]
   let placeholder = 0 // placeholder =0
-  for (let i = 0; i<=stringValue; i += 1){  // i=1; i<=5; i++
-    array.push(placeholder[i]++);
-    return array;
+  for (let i = 0; i<=arrayCounter.length -1; i += 1){  // i=1; i<=5; i++
+    arrayCounter.push(placeholder[i]++);
+    return arrayCounter;
   }
 }
 
