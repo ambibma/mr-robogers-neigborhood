@@ -30,7 +30,6 @@ test: It should take the primitive value from user inputted string
 code: stringArrayConvert("5")
 Expected Output: (5)
 
-Describe: stringArrayConvert(stringNumber)
 Test: It should return user's inputted number into an organized string array starting from 0 all the way to the user's inputted number.
 Code: stringArrayConvert("5");
 Expected Output: ["0","1","2","3","4","5"]

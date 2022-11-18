@@ -3,8 +3,9 @@
 // code: stringArrayConvert("5")
 // Expected Output: (5)
 
-function stringArrayConvert(stringNumber){
-  let stringValue = parseInt(stringNumber)
+function stringConvert(stringNumber) {
+  const stringValue = parseInt(stringNumber);
+  console.log(stringValue);
   return stringValue;
 }
 
@@ -17,9 +18,17 @@ function stringArrayConvert(stringNumber){
 // code: stringArrayConvert("5");
 // Expected Output: [0,1,2,3,4,5]
 
-function stringArrayConvert(stringNumber){
-  let stringValue = parseInt(stringNumber)
-  return stringValue;
+// Input: 5
+// output: [x,x ,x ,x ,x ,5]
+// shift all numbers <5 from the begining
+
+function stringArrayConvert(stringValue) { // stringValue =5
+  let array = [0]; // array = [0]
+  let placeholder = 0 // placeholder =0
+  for (let i = 0; i<=stringValue; i += 1){  // i=1; i<=5; i++
+    array.push(placeholder[i]++);
+    return array;
+  }
 }
 
 // Describe: specialNums(numArray)
