@@ -38,6 +38,14 @@ Test: It should return user's inputted number into an organized array starting f
 code: stringArrayConvert("5");
 Expected Output: [0,1,2,3,4,5]
 
+Describe: hasNumber(numArray)
+test: It should check each digit to see if it it contains a 1,2,3,
+code: hasNumber(3, [33,32,1,13])
+expected: [33,32,13]
+
+
+
+
 Describe: specialNums(numArray)
 test: It should return all digits containing 1s,2s and 3s 
 code: specialNums([1,2,3,4,5]);
