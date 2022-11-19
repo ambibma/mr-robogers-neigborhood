@@ -38,10 +38,17 @@ Test: It should return user's inputted number into an organized array starting f
 code: stringArrayConvert("5");
 Expected Output: [0,1,2,3,4,5]
 
+
 Describe: hasNumber(numArray)
-test: It should check each digit to see if it it contains a 1,2,3,
+test: it should check to see if a two digit number has number
+code: hasNumber("33", 3)
+expected: true
+
+test: It should check each digit in an array to see if it it contains a single given number
 code: hasNumber(3, [33,32,1,13])
-expected: [33,32,13]
+expected: [33,32,13] or true
+
+
 
 
 

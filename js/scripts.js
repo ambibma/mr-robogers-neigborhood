@@ -58,12 +58,11 @@ function digitChecker(doubleDig, number){
 }
 
 
-function hasNumber(stringArray, number) { // ["33", "32", "31"],   //                   
+function hasNumber(stringArray, num) { // ["33", "32", "31"],   //                   
   let passArray = [];
-  let counter = 0
   for (i = 0; i<=stringArray.length; i++);
-  if ( (digitSplitter(stringArray[counter]).includes(number, -1)) === true) {
-      counter++;
+      digitChecker(stringArray[i], num);
+  if (digitChecker("33", num) === true) {
       passArray.push(stringArray[i]);
     }
   return passArray;
