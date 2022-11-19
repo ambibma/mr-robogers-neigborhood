@@ -60,13 +60,13 @@ function digitChecker(doubleDig, number){
 
 function hasNumber(stringArray, num) { // ["33", "32", "31"],   // num=3                
   let passArray = [];
-  for (let i = 0; i<=stringArray.length; i++) {
-    if (stringArray[i] >= 10){
-    digitChecker(stringArray[i], num);
+  for (let i = 0; i<=stringArray.length -1; i++) {
+        let indexCheck = digitChecker(stringArray[i], num);
+    if (indexCheck === true) {
     passArray.push(stringArray[i]);
-    } else if (stringArray[i] < 10 ){
-    digitChecker(stringArray[i], num);
-    passArray.push(stringArray[i]);
+    // } else if (stringArray[i] < 10 ){
+    // digitChecker(stringArray[i], num);
+    // passArray.push(stringArray[i]);
     }
   }
   return passArray;
