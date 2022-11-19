@@ -39,25 +39,22 @@ function stringArrayConvert(stringNumber) {
 // Describe: hasNumber(numArray)
 // test: It should check each digit to see if it it contains a 1,2,3,
 // code: hasNumber(3, [33,32,1,13])
-// expected: [33,32,13]
+// expected: true
 function digitSplitter(stringNumber){
   let splitDigits = stringNumber.toString().split('')
   return splitDigits
 }
 
 
-function hasNumber(stringArray, number) { // ["33", "32", "31"], 3
-  let checkNumber = number.toString();  // = "3"                      
+function hasNumber(stringArray, number) { // ["33", "32", "31"],   //                   
   let passArray = [];
+  let counter = 0
   for (i = 0; i<=stringArray.length; i++);
-  let splitDigit = digitSplitter(stringArray);
-  if (splitDigit[i].includes(checkNumber) === true) {
-        console.log(splitDigit);
-        stringArray[counter].join('');
-        counter++;
-        passArray.push(i);
+  if ( (digitSplitter(stringArray[counter]).includes(number, -1)) === true) {
+      counter++;
+      passArray.push(stringArray[i]);
     }
-  return passArray.push(i);
+  return passArray;
 }
 
 
