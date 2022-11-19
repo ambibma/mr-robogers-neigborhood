@@ -50,7 +50,7 @@ function digitChecker(doubleDig, number){
    if(numberCheck === true){
     let digitJoin = arrayCheck.join('');
     console.log(arrayCheck);
-    digitJoin.array;
+    digitJoin.arrayCheck;
     return true;
   } else {
     return false;
@@ -65,7 +65,7 @@ function hasNumber(stringArray, num) { // ["33", "32", "31"],   // num=3
     digitChecker(stringArray[i], num);
 
     passArray.push(stringArray[i]);
-  } else if (stringArray[i] === num) {
+  } else if (parseInt(stringArray[i]) === num) {
       passArray.push(stringArray[i]);
   } else     
       return passArray;
