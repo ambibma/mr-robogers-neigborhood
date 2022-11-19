@@ -34,18 +34,25 @@ function stringArrayConvert(stringNumber) {
 
 
 function specialNums(stringNumber){
-  let stringArray = stringArrayConvert(stringNumber);
-  if (stringArray.includes(3, -1) === true ) {
-    for (i=(stringArray.length -2); i>0; i-=1 ){
-      stringArray.push("Won't you be my neighbor? ");
-     return stringArray
-      
-   }else (stringArray.includes(2,-1) === true) { 
-    for (i=(stringArray.length -2; i>0; i-=1)){
+  let stringArray = stringArrayConvert(stringNumber); //[0,1,2,3,4,5,]
+  let regNums = []
+  let boopNums = []
 
+  for (i=(stringArray.length -1); i>=0; i-=1 ){ 
+   if ((stringArray.includes(3, stringArray[i]) === false) && (stringArray.includes(2, stringArray[i]) === false) && (stringArray.includes(1, stringArray[i]) === false)){
+      regNums.push(i);
+   } else if (stringArray.includes(3, stringArray[i]) === true) { 
+      boopNums.push(i);
+   } else if (stringArray.includes(2, stringArray[i]) === true){
+      boopNums.push(i)
+    } else if (stringArray.includes(1, stringArray[i]) === true){
+      boopNums.push(i)
+    } else {
+      regNums.push(i)
+      }
     }
+  return boopNums;
   }
-}
 
 // test: It should return all digits containing 13, 12, 23, 21
 // code: specialNums([0,1,2,3,4,5,6,7,8,9,10,12,13...23]);
