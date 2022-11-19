@@ -47,7 +47,7 @@ function digitSplitter(stringNumber){
 function digitChecker(doubleDig, number){
   let arrayCheck = digitSplitter(doubleDig);
    let numberCheck = doubleDig.includes(number);
-   if(digitSplitter(doubleDig).includes(number) === numberCheck){
+   if(numberCheck === true){
     let digitJoin = arrayCheck.join('');
     console.log(arrayCheck);
     digitJoin.array;
