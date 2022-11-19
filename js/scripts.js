@@ -33,7 +33,7 @@ function stringArrayConvert(stringNumber) {
 
 // Describe: specialNums(numArray)
 // test: It should return all digits containing 1s,2s and 3s 
-// code: specialNums([1,2,3,4,5]);
+// code: specialNums([0,1,2,3,4,5]);
 // Expected Output: [1,2,3];
 
 // Describe: hasNumber(numArray)
@@ -41,7 +41,7 @@ function stringArrayConvert(stringNumber) {
 // code: hasNumber(3, [33,32,1,13])
 // expected: true
 function digitSplitter(stringNumber){
-  let splitDigits = stringNumber.toString().split('')
+  let splitDigits = stringNumber.toString().split("") //[33] 3 [3,3]
   return splitDigits
 }
 function digitChecker(doubleDig, number){
@@ -58,16 +58,19 @@ function digitChecker(doubleDig, number){
 }
 
 
-function hasNumber(stringArray, num) { // ["33", "32", "31"],   //                   
+function hasNumber(stringArray, num) { // ["33", "32", "31"],   // num=3                
   let passArray = [];
-  for (i = 0; i<=stringArray.length; i++);
-      digitChecker(stringArray[i], num);
-  if (digitChecker("33", num) === true) {
-      passArray.push(stringArray[i]);
-    }
-  return passArray;
-}
+  for (let i = 0; i<=stringArray.length; i++) {
+    if (stringArray[i] >= 10){
+    digitChecker(stringArray[i], num);
 
+    passArray.push(stringArray[i]);
+  } else if (stringArray[i] === num) {
+      passArray.push(stringArray[i]);
+  } else     
+      return passArray;
+  }
+}
 
 
 function specialNums(stringNumber){
