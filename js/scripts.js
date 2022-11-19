@@ -44,6 +44,18 @@ function digitSplitter(stringNumber){
   let splitDigits = stringNumber.toString().split('')
   return splitDigits
 }
+function digitChecker(doubleDig, number){
+  let arrayCheck = digitSplitter(doubleDig);
+   let numberCheck = doubleDig.includes(number);
+   if(digitSplitter(doubleDig).includes(number) === numberCheck){
+    let digitJoin = arrayCheck.join('');
+    console.log(arrayCheck);
+    digitJoin.array;
+    return true;
+  } else {
+    return false;
+  }
+}
 
 
 function hasNumber(stringArray, number) { // ["33", "32", "31"],   //                   
