@@ -63,13 +63,13 @@ function hasNumber(stringArray, num) { // ["33", "32", "31"],   // num=3
   for (let i = 0; i<=stringArray.length; i++) {
     if (stringArray[i] >= 10){
     digitChecker(stringArray[i], num);
-
     passArray.push(stringArray[i]);
-  } else if (parseInt(stringArray[i]) === num) {
-      passArray.push(stringArray[i]);
-  } else     
-      return passArray;
+    } else if (stringArray[i] < 10 ){
+    digitChecker(stringArray[i], num);
+    passArray.push(stringArray[i]);
+    }
   }
+  return passArray;
 }
 
 
