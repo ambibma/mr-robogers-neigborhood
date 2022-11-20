@@ -61,12 +61,12 @@ function handleFormSubmission(event) {
   event.preventDefault();
   const numberInput = document.getElementById("numberInput").value;
   printArray(numberInput);
+
 }
 window.addEventListener("load", function() {
-  document.querySelector("form#numberInputForm").addEventListener;
-  ("submit", handleFormSubmission);
+  document.getElementById("numberInputForm").addEventListener("submit", handleFormSubmission);
 
-})
+});
 
 
 
