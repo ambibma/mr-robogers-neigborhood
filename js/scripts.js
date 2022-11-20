@@ -26,7 +26,8 @@ function stringArrayConvert(stringNumber) {
   let stringArray = []; 
   // let stringToNum = stringConvert(stringNumber);
   for (i = 0; i<=stringNumber; i += 1) { 
-    stringArray.push(i);
+    stringArray.push(digitSplitter((i)).join(""));
+
   }
   return stringArray;
 }
@@ -46,7 +47,7 @@ function digitSplitter(stringNumber){
 }
 function digitChecker(doubleDig, number){
   let arrayCheck = digitSplitter(doubleDig);
-   let numberCheck = digitSplitter(doubleDig.includes(number));
+   let numberCheck = doubleDig.includes(number, arrayCheck.length -1);
    if(numberCheck === true){
     let digitJoin = arrayCheck.join('');
     console.log(arrayCheck);
