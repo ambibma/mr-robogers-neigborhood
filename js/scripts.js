@@ -92,7 +92,8 @@ return failArray;
 function specialNums(stringNumber){
   let arrayInput = stringArrayConvert(stringNumber); // [0,"1","2","3","4",
   arrayInput.forEach(function(element) {
-   digitChecker(arrayInput.indexOf(element), 3)
+   if (digitChecker(arrayInput.indexOf(element), 3) === true)
+   return true;
  }
 )}
 // test: It should return all digits containing 13, 12, 23, 21
