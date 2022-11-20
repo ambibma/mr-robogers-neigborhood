@@ -47,8 +47,8 @@ function digitSplitter(stringNumber){
 }
 function digitChecker(doubleDig, number){
   let arrayCheck = digitSplitter(doubleDig);
-   let numberCheck = doubleDig.includes(number);
-   if(numberCheck === true){
+  //  let numberCheck = doubleDig.includes(number);
+   if(arrayCheck.includes(number.toString()) === true){
     let digitJoin = arrayCheck.join('');
     console.log(arrayCheck);
     digitJoin.arrayCheck;
@@ -90,10 +90,11 @@ return failArray;
 // "2023" 
 
 function specialNums(stringNumber){
-  let arrayInput = stringArrayConvert(stringNumber); // [0,"1","2","3","4","5"]
-  let boopNums = [(hasNumber(arrayInput, 3)) + (hasNumber(arrayInput, 2)) + (hasNumber(arrayInput, 1))];
-  return boopNums;
+  let arrayInput = stringArrayConvert(stringNumber); // [0,"1","2","3","4",
+  arrayInput.forEach(function(element) {
+   digitChecker(arrayInput.indexOf(element), 3)
  }
+)}
 // test: It should return all digits containing 13, 12, 23, 21
 // code: specialNums([0,1,2,3,4,5,6,7,8,9,10,12,13...23]);
 // Expected output: [1,2,3,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
