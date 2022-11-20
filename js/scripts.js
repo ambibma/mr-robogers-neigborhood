@@ -9,9 +9,9 @@ function stringConvert(stringNumber) {
   return stringValue;
 }
 
-function stringConvert(stringNumber) {
-  let stringArray = stringNumber
-}
+// function stringConvert(stringNumber) {
+//   let stringArray = stringNumber
+// }
 
 // Describe: stringArrayConvert(stringNumber)
 // Test: It should return user's inputted number into an organized string array starting from 0 all the way to the user's inputted number.
@@ -24,8 +24,8 @@ function stringConvert(stringNumber) {
 
 function stringArrayConvert(stringNumber) { 
   let stringArray = []; 
-  let stringToNum = stringConvert(stringNumber);
-  for (i = 0; i<=stringToNum; i += 1) { 
+  // let stringToNum = stringConvert(stringNumber);
+  for (i = 0; i<=stringNumber; i += 1) { 
     stringArray.push(i);
   }
   return stringArray;
@@ -64,19 +64,11 @@ function hasNumber(stringArray, num) { // ["33", "32", "31"],   // num=3
         let indexCheck = digitChecker(stringArray[i], num);
     if (indexCheck === true) {
     passArray.push(stringArray[i]);
-    // } else if (stringArray[i] < 10 ){
-    // digitChecker(stringArray[i], num);
-    // passArray.push(stringArray[i]);
     }
   }
   return passArray;
 }
 
-
-function specialNums(stringNumber){
-  let stringArray = stringArrayConvert(stringNumber); //[0,1,2,3,4,5,]
-  let regNums = []
-  let boopNums = []
 //this for loop checks to see if the whole array, no matter what contains  a 1,2,3 
 // but for numbers such as 10, includes() cannot identify 10 as containing 1
 // so it has to take string
@@ -84,21 +76,16 @@ function specialNums(stringNumber){
 // it has to split double digit string, at index it which its found, then check
 // "3023" => "'3'0''2'3'" has 3? => "wont you be my neighbor?"
 // "2023" 
-  for (i=(stringArray.length -1); i>=0; i-=1 ){ 
-   if ((stringArray.includes(3, stringArray[i]) === false) && (stringArray.includes(2, stringArray[i]) === false) && (stringArray.includes(1, stringArray[i]) === false)){
-      regNums.push(i);
-   } else if (stringArray.includes(3, stringArray[i]) === true) { 
-      boopNums.push(i);
-   } else if (stringArray.includes(2, stringArray[i]) === true){
-      boopNums.push(i)
-    } else if (stringArray.includes(1, stringArray[i]) === true){
-      boopNums.push(i)
-    } else {
-      regNums.push(i)
-      }
-    }
+
+function specialNums(stringNumber){
+  let array = stringArrayConvert(stringNumber);
+  let regNums = []
+  let boopNums = []
+  for (i=0; i<= stringArray.length -1; i++) { 
+   if
   return boopNums 
   }
+}
 
 // test: It should return all digits containing 13, 12, 23, 21
 // code: specialNums([0,1,2,3,4,5,6,7,8,9,10,12,13...23]);

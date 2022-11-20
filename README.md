@@ -34,26 +34,19 @@ Test: It should return user's inputted number into an organized string array sta
 Code: stringArrayConvert("5");
 Expected Output: ["0","1","2","3","4","5"]
 
-Test: It should return user's inputted number into an organized array starting from 0 all the way to the user's inputted number as primitives *.
-code: stringArrayConvert("5");
-Expected Output: [0,1,2,3,4,5]
+
 
 
 Describe: hasNumber(numArray)
 test: it should check to see if a two digit number has number
 code: hasNumber("33", 3)
-expected: true
+expected output: ["33"]
 
 test: It should check each digit in an array to see if it it contains a single given number
 code: hasNumber(3, [33,32,1,13])
 expected: [33,32,13] or true
 
-
-
-
-
-
-Describe: specialNums(numArray)
+Describe: Special(numArray)
 test: It should return all digits containing 1s,2s and 3s 
 code: specialNums([1,2,3,4,5]);
 Expected Output: [1,2,3];
