@@ -46,7 +46,7 @@ function digitSplitter(stringNumber){
 }
 function digitChecker(doubleDig, number){
   let arrayCheck = digitSplitter(doubleDig);
-   let numberCheck = doubleDig.includes(number);
+   let numberCheck = digitSplitter(doubleDig.includes(number));
    if(numberCheck === true){
     let digitJoin = arrayCheck.join('');
     console.log(arrayCheck);
@@ -58,17 +58,28 @@ function digitChecker(doubleDig, number){
 }
 
 
-function hasNumber(stringArray, num) { // ["33", "32", "31"],   // num=3                
+function hasNumber(stringArray, num) {
   let passArray = [];
   for (let i = 0; i<=stringArray.length -1; i++) {
         let indexCheck = digitChecker(stringArray[i], num);
     if (indexCheck === true) {
     passArray.push(stringArray[i]);
     }
-  }
+  } 
   return passArray;
 }
 
+function regularNumbers(stringArray, num){
+  let failArray = [];
+  for (let i = 0; i<=stringArray.length -1; i++) {
+    let indexCheck = digitChecker(stringArray[i], num);
+if (indexCheck === false) {
+  failArray.push(stringArray[i]);
+}
+} 
+return failArray;
+  
+}
 //this for loop checks to see if the whole array, no matter what contains  a 1,2,3 
 // but for numbers such as 10, includes() cannot identify 10 as containing 1
 // so it has to take string
@@ -78,18 +89,13 @@ function hasNumber(stringArray, num) { // ["33", "32", "31"],   // num=3
 // "2023" 
 
 function specialNums(stringNumber){
-  let array = stringArrayConvert(stringNumber);
-  let regNums = []
-  let boopNums = []
-  for (i=0; i<= stringArray.length -1; i++) { 
-   if
-  return boopNums 
-  }
-}
-
+  let arrayInput = stringArrayConvert(stringNumber); // [0,"1","2","3","4","5"]
+  let boopNums = (hasNumber(arrayInput, 3)) + (hasNumber(arrayInput, 2)) + (hasNumber(arrayInput, 1));
+  return boopNums;
+ }
 // test: It should return all digits containing 13, 12, 23, 21
 // code: specialNums([0,1,2,3,4,5,6,7,8,9,10,12,13...23]);
-// Expected output: [0,1,2,3,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
+// Expected output: [1,2,3,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
 
 // Describe: regNums(numArray)
 // test: It should return all non-special numbers in numArray
@@ -112,4 +118,4 @@ function specialNums(stringNumber){
 
 // test: If mrRoboger's Array cannot be appended into list tags with mixed data types...Array will be converted into string
 // code: mrRoboger("5")
-// output: ["0","beep","boop","Won't you be my neighbor?", "4", "5"];
+// output: ["0","beep","boop","Won't you be my neighbor?", "4", "5"]
