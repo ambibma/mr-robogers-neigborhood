@@ -30,7 +30,7 @@ function digitChecker(doubleDig, number){
   }
 }
 
-function specialNums(stringNumber){
+function beepBoop(stringNumber){
   let arrayInput = stringArrayConvert(stringNumber); 
   arrayInput.forEach(function(element) {
    if (digitChecker(arrayInput.indexOf(element), 3) === true) {
@@ -49,14 +49,24 @@ function specialNums(stringNumber){
 //UI
 function printArray(number) {
   const div = document.querySelector("div.printArray")
-  let array = specialNums(number);
+  let array = beepBoop(number);
   array.forEach(function(element) {
     const p = document.createElement("p")
     p.append(element);
     div.append(p)
   })
-
+  
 }
+function handleFormSubmission(event) {
+  event.preventDefault();
+  const numberInput = document.getElementById("numberInput").value;
+  printArray(numberInput);
+}
+window.addEventListener("load", function() {
+  document.querySelector("form#numberInputForm").addEventListener;
+  ("submit", handleFormSubmission);
+
+})
 
 
 
