@@ -91,7 +91,7 @@ return failArray;
 
 function specialNums(stringNumber){
   let arrayInput = stringArrayConvert(stringNumber); // [0,"1","2","3","4","5"]
-  let boopNums = (hasNumber(arrayInput, 3)) + (hasNumber(arrayInput, 2)) + (hasNumber(arrayInput, 1));
+  let boopNums = [(hasNumber(arrayInput, 3)) + (hasNumber(arrayInput, 2)) + (hasNumber(arrayInput, 1))];
   return boopNums;
  }
 // test: It should return all digits containing 13, 12, 23, 21

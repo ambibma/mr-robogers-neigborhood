@@ -46,6 +46,11 @@ test: It should check each digit in an array to see if it it contains a single g
 code: hasNumber(3, [33,32,1,13])
 expected: [33,32,13] or true
 
+Describe: regNums(numArray)
+test: It should return all non-special numbers in numArray
+code: regNums([0,1,2,3,4,5,6,7,8,9])
+expected Output:[0,4,5,6,7,8,9];
+
 Describe: Special(numArray)
 test: It should return all digits containing 1s,2s and 3s 
 code: specialNums([1,2,3,4,5]);
@@ -55,10 +60,6 @@ test: It should return all digits containing 13, 12, 23, 21
 code: specialNums([0,1,2,3,4,5,6,7,8,9,10,12,13...23]);
 Expected output: [0,1,2,3,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
 
-Describe: regNums(numArray)
-test: It should return all non-special numbers in numArray
-code: regNums([0,1,2,3,4,5,6,7,8,9])
-expected Output:[0,4,5,6,7,8,9];
 
 Describe: beepBoop(specialNumsArray)
 test: It should return special Nums transformed as 1s to "Beep", 2s to "Boop" and 3s "Won't you be my neighbor?"
