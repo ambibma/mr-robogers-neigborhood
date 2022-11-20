@@ -48,12 +48,12 @@ function specialNums(stringNumber){
 
 //UI
 function printArray(number) {
-  const h1 = document.querySelector(".mr-robo.h1")
+  const div = document.querySelector("div.printArray")
   let array = specialNums(number);
   array.forEach(function(element) {
     const p = document.createElement("p")
     p.append(element);
-    document.body.append(p)
+    div.append(p)
   })
 
 }
