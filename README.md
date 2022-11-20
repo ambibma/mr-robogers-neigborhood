@@ -52,14 +52,13 @@ code: regNums([0,1,2,3,4,5,6,7,8,9])
 expected Output:[0,4,5,6,7,8,9];
 
 Describe: Special(numArray)
-test: It should return all digits containing 1s,2s and 3s 
-code: specialNums([1,2,3,4,5]);
-Expected Output: [1,2,3];
+test: it should check each number starting from 0 in a array of string numbers for one special number, such as 3.
+code: specialNumbers("5")
+expected output 
 
-test: It should return all digits containing 13, 12, 23, 21
-code: specialNums([0,1,2,3,4,5,6,7,8,9,10,12,13...23]);
-Expected output: [0,1,2,3,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
+test: it should be able to check each number for multiple special numbers
 
+test: 
 
 Describe: beepBoop(specialNumsArray)
 test: It should return special Nums transformed as 1s to "Beep", 2s to "Boop" and 3s "Won't you be my neighbor?"

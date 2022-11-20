@@ -92,10 +92,18 @@ return failArray;
 function specialNums(stringNumber){
   let arrayInput = stringArrayConvert(stringNumber); // [0,"1","2","3","4",
   arrayInput.forEach(function(element) {
-   if (digitChecker(arrayInput.indexOf(element), 3) === true)
-   return true;
- }
-)}
+   if (digitChecker(arrayInput.indexOf(element), 3) === true) {
+      arrayInput.splice(arrayInput.indexOf(element), 1 ,"Won't you be my neighbor?")
+   } else if ((digitChecker(arrayInput.indexOf(element), 2)) === true ) {
+      arrayInput.splice(arrayInput.indexOf(element), 1 ,"Boop")
+   } else if (digitChecker(arrayInput.indexOf(element), 1) === true) {
+    arrayInput.splice(arrayInput.indexOf(element), 1 ,"Beep!")
+   } else {
+    return false;
+   }
+  });
+  return arrayInput;
+}
 // test: It should return all digits containing 13, 12, 23, 21
 // code: specialNums([0,1,2,3,4,5,6,7,8,9,10,12,13...23]);
 // Expected output: [1,2,3,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
