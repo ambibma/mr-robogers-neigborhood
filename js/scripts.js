@@ -56,6 +56,9 @@ function isEmpty(){
 
 //UI
 function printArray(number) {
+ if(isEmpty(number)) {
+  return null
+ } 
   const div = document.querySelector("div.printArray")
   let array = beepBoop(number);
   array.forEach(function(element) {
@@ -65,15 +68,25 @@ function printArray(number) {
   })
   
 }
+function resetRoboger() {
+  window.location.reload();
+}
 function handleFormSubmission(event) {
   event.preventDefault();
   const numberInput = document.getElementById("numberInput").value;
   printArray(numberInput);
-
+  let reloadButton = document.getElementById("reloadButton")
+  reloadButton.classList.remove("hidden")
+  
+  
+  
 }
+
 window.addEventListener("load", function() {
   document.getElementById("numberInputForm").addEventListener("submit", handleFormSubmission);
-
+  reloadButton.addEventListener("click", resetRoboger);
+  
+  
 });
 
 
