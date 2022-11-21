@@ -58,8 +58,6 @@ Code: stringArrayConvert("5");
 Expected Output: ["0","1","2","3","4","5"]
 
 
-
-
 Describe: hasNumber(numArray)
 test: it should check to see if a two digit number has number
 code: hasNumber("33", 3)

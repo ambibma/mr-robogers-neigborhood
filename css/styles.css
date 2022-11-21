@@ -1,8 +1,11 @@
 body{
   background-image: url("../img/background.jpg");
   background-size: cover;
+  background-position: 0 -100px;
   background-repeat: no-repeat;
+  height: 100vh;
   background-color: black;
+  display: flow-root;
 }
 .container{
   display: flex;
@@ -12,13 +15,30 @@ body{
   align-items: center;
   flex-grow: 1;
   flex-direction: column;
+  width: 500px;
+  margin: auto;
+  padding: 5px;
 }
 .printArray{
   display:flex;
-  background-color: rgba(255, 192, 203, 0.497);
+  background-color: rgba(255, 192, 203, 0.798);
   flex-direction: column;
   margin: auto;
 }
+.printArray p{
+  animation: fadein 5s
+}
+@keyframes fadein{
+  from{
+    opacity: 0;
+    color: rgb(244, 150, 9);
+  }
+  to{
+    opacity: 100%;
+    color: rgb(55, 255, 0);
+  }
+}
+
 .hidden{
   display: none;
 }
