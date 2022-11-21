@@ -56,6 +56,8 @@ function printArray(number) {
  } 
   const div = document.querySelector("div.printArray")
   let array = beepBoop(number);
+  pTag = document.querySelector("div.printArray p")
+  
   array.forEach(function(element) {
     const p = document.createElement("p")
     p.append(element);
@@ -70,8 +72,10 @@ function handleFormSubmission(event) {
   event.preventDefault();
   const numberInput = document.getElementById("numberInput").value;
   printArray(numberInput);
-  let reloadButton = document.getElementById("reloadButton")
-  reloadButton.classList.remove("hidden")
+  const reloadButton = document.getElementById("reloadButton");
+  reloadButton.classList.remove("hidden");
+  const submitButton = document.getElementById("submit");
+  submitButton.classList.add("hidden");
   
   
   
