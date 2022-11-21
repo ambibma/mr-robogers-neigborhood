@@ -43,11 +43,6 @@ Copyright (c) Ambi Hidalgo 2022
 ## Tests for Business Logic
 
 
-Output: App will return a list of values from 0 => user's inputted number 
-where all digits that contain a 1, are replaced with "Beep". 
-All Numbers that contain 2 will be replaced with "Boop!" 
-All numbers that contain a 3 are replaced with "Won't you be my neighbor"
-
 Describe: stringArrayConvert(stringNumber)
 test: It should take the primitive value from user inputted string
 code: stringArrayConvert("5") = 5
@@ -55,27 +50,38 @@ Expected Output: (5)
 
 Test: It should return user's inputted number into an organized string array starting from 0 all the way to the user's inputted number.
 Code: stringArrayConvert("5");
-Expected Output: ["0","1","2","3","4","5"]
+Expected Output: [0,1,2,3,4,5]
+
+Describe: digitSplitter(stringNumber);
+test: It should take the user inputted number, and return a number as string.
+Code: digitSplitter("5")
+Expected Output: ["5"]
+
+test: should the number happen to be a primitive, it will still return string.
+Code: digitSplitter(5);
+expected output: ["5"]
+
+describe: stringArray convert should take either either prim or string numbers and use digitSplitter to return an index of inputted number and always return string.
+code: stringArrayConvert("5");
+expected Output: ["5","4","3","2","1"]
 
 
-Describe: hasNumber(numArray)
-test: it should check to see if a two digit number has number
-code: hasNumber("33", 3)
-expected output: ["33"]
+Describe: digitChecker(number, number)
+test: it should check to see if a single digit number has number
+code: hasNumber("3", 3)
+expected output: true
+
+test: it should check to see if a double digit number contains a single number
+code: digitChecker("33", 3)
+expected output: true
 
 test: It should check each digit in an array to see if it it contains a single given number
-code: hasNumber(3, [33,32,1,13])
-expected: [33,32,13] or true
+code: digitChecker(["33","32","1","13"], 3)
+expected: true
 
-Describe: regNums(numArray)
-test: It should return all non-special numbers in numArray
-code: regNums([0,1,2,3,4,5,6,7,8,9])
-expected Output:[0,4,5,6,7,8,9];
-
-Describe: Special(numArray)
-test: it should check each number starting from 0 in a array of string numbers for one special number, such as 3.
-code: specialNumbers("5")
+test: It should always take the number to be checked and convert it to string using digitSplitter()
 expected output: true
+
 
 Describe: beepBoop(specialNumsArray)
 test: It should return special Nums transformed as 1s to "Beep", 2s to "Boop" and 3s "Won't you be my neighbor?"

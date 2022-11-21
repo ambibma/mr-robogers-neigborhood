@@ -1,14 +1,9 @@
 //Business
-function stringConvert(stringNumber) {
-  let stringValue = parseInt(stringNumber);
-  return stringValue;
-}
 
 function stringArrayConvert(stringNumber) { 
   let stringArray = []; 
-  for (i = 0; i<=stringNumber; i += 1) { 
+    for (i = 0; i<=stringNumber; i += 1) { 
     stringArray.push(digitSplitter((i)).join(""));
-
   }
   return stringArray;
 }
