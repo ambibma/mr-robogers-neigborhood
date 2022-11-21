@@ -91,34 +91,3 @@ window.addEventListener("load", function() {
 
 
 
-
-// function hasNumber(stringArray, num) {
-  //   let passArray = [];
-  //   for (let i = 0; i<=stringArray.length -1; i++) {
-    //         let indexCheck = digitChecker(stringArray[i], num);
-//     if (indexCheck === true) {
-//     passArray.push(stringArray[i]);
-//     }
-//   } 
-//   return passArray;
-// }
-
-// function regularNumbers(stringArray, num){
-//   let failArray = [];
-//   for (let i = 0; i<=stringArray.length -1; i++) {
-//     let indexCheck = digitChecker(stringArray[i], num);
-// if (indexCheck === false) {
-//   failArray.push(stringArray[i]);
-// }
-// } 
-// return failArray;
-  
-// }
-//this for loop checks to see if the whole array, no matter what contains  a 1,2,3 
-// but for numbers such as 10, includes() cannot identify 10 as containing 1
-// so it has to take string
-// then if that number is double digits
-// it has to split double digit string, at index it which its found, then check
-// "3023" => "'3'0''2'3'" has 3? => "wont you be my neighbor?"
-// "2023" 
-
