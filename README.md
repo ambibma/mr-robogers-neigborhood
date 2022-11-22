@@ -3,7 +3,7 @@
 #### By Ambi Hidalgo 
 ###### ambio.pk@gmail.com
 #
-###### Website image by Phillip Glickman
+###### Website image by Eric Krull
 
 #
 ---
