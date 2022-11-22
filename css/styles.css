@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&family=Prompt&display=swap');
 
-body{
-  background-image: url("../img/background.jpg");
+html{
+  background-image: url("../img/background2.jpg");
   background-size: cover;
   background-position: 0 -100px;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   height: 100vh;
   background-color: black;
   display: flow-root;
-  font-family: "Mukta", "sans-serif";
+  font-family: "mukta", sans-serif;
   color: white;
 }
 .container{
@@ -22,12 +22,15 @@ body{
   width: 500px;
   margin: auto;
   padding: 5px;
+  font-family: "Mukta", sans-serif;
 }
 .printArray{
   display:flex;
-  background-color: rgba(255, 192, 203, 0.798);
+  background-color: rgba(203, 42, 69, 0.798);
   flex-direction: column;
   margin: auto;
+  padding: 5px;
+  font-family: "Mukta", sans-serif;
 }
 .printArray p{
   animation: fadein 5s
@@ -42,7 +45,19 @@ body{
     color: rgb(55, 255, 0);
   }
 }
-
+#submit{
+  background-color: rgba(59, 247, 59, 0.895);
+  border-radius: 20px;
+  font-family: "Mukta", sans-serif;
+}
+.reload{
+  display: grid;
+  font-size:18px;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: yellow;
+  font-family: "Mukta", sans-serif;
+}
 .hidden{
   display: none;
 }
