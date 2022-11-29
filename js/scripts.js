@@ -66,16 +66,37 @@ function printArray(number) {
   
 }
 function resetRoboger() {
-  window.location.reload();
+
+  document.getElementById("numberInputForm").addEventListener("submit", handleFormSubmission);
+
+//   const printDiv = document.createElement("div")
+//   let addDiv = document.createElement("div")
+//   addDiv.setAttribute("id", "printArray")
+//   handleFormSubmission();
+
+  // window.location.reload();
 }
+function clearResults() {
+
+  let div = document.getElementById("results");
+  div.innerText = null;
+  document.getElementById("numberInputForm").removeEventListener("submit", handleFormSubmission);
+  const clearButton = document.getElementById("clearButton");
+  clearButton.classList.add("hidden");
+
+}
+
 function handleFormSubmission(event) {
   event.preventDefault();
   const numberInput = document.getElementById("numberInput").value;
   printArray(numberInput);
   const reloadButton = document.getElementById("reloadButton");
+  const clearButton = document.getElementById("clearButton");
+  clearButton.classList.remove("hidden")
   reloadButton.classList.remove("hidden");
   const submitButton = document.getElementById("submit");
   submitButton.classList.add("hidden");
+  document.getElementById("numberInputForm").removeEventListener("submit", handleFormSubmission);
   
   
   
@@ -83,6 +104,7 @@ function handleFormSubmission(event) {
 
 window.addEventListener("load", function() {
   document.getElementById("numberInputForm").addEventListener("submit", handleFormSubmission);
+  clearButton.addEventListener("click", clearResults)
   reloadButton.addEventListener("click", resetRoboger);
   
   

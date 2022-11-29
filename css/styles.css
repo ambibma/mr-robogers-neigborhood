@@ -58,6 +58,19 @@ html{
   background-color: yellow;
   font-family: "Mukta", sans-serif;
 }
+.clear{
+  display: grid;
+  font-size:18px;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: yellow;
+  font-family: "Mukta", sans-serif;
+}
+
+
+
+
+
 .hidden{
   display: none;
 }
