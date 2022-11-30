@@ -65,38 +65,35 @@ function printArray(number) {
   })
   
 }
-function resetRoboger() {
-
+function resetRoboger(event) {
   document.getElementById("numberInputForm").addEventListener("submit", handleFormSubmission);
-
-//   const printDiv = document.createElement("div")
-//   let addDiv = document.createElement("div")
-//   addDiv.setAttribute("id", "printArray")
-//   handleFormSubmission();
-
-  // window.location.reload();
+  handleFormSubmission(event);
 }
 function clearResults() {
-
   let div = document.getElementById("results");
+  const clearButton = document.getElementById("clearButton");
+  const reloadButton = document.getElementById("reloadButton");
   div.innerText = null;
   document.getElementById("numberInputForm").removeEventListener("submit", handleFormSubmission);
-  const clearButton = document.getElementById("clearButton");
   clearButton.classList.add("hidden");
+  reloadButton.classList.remove("hidden");
+  document.querySelector("input#numberInput").value = null;
+
 
 }
 
 function handleFormSubmission(event) {
   event.preventDefault();
-  const numberInput = document.getElementById("numberInput").value;
-  printArray(numberInput);
+  const numberInput = document.querySelector("input#numberInput").value;
   const reloadButton = document.getElementById("reloadButton");
   const clearButton = document.getElementById("clearButton");
-  clearButton.classList.remove("hidden")
-  reloadButton.classList.remove("hidden");
   const submitButton = document.getElementById("submit");
+  printArray(numberInput);
+  clearButton.classList.remove("hidden")
+  reloadButton.classList.add("hidden");
   submitButton.classList.add("hidden");
   document.getElementById("numberInputForm").removeEventListener("submit", handleFormSubmission);
+  reloadButton.removeEventListener("click", resetRoboger);
   
   
   
@@ -104,7 +101,7 @@ function handleFormSubmission(event) {
 
 window.addEventListener("load", function() {
   document.getElementById("numberInputForm").addEventListener("submit", handleFormSubmission);
-  clearButton.addEventListener("click", clearResults)
+  clearButton.addEventListener("click", clearResults);
   reloadButton.addEventListener("click", resetRoboger);
   
   
