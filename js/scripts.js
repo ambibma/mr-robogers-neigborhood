@@ -1,4 +1,3 @@
-//Business
 
 function stringArrayConvert(stringNumber) { 
   let stringArray = []; 
@@ -17,7 +16,6 @@ function digitChecker(doubleDig, number){
   let arrayCheck = digitSplitter(doubleDig);
    if(arrayCheck.includes(number.toString()) === true){
     let digitJoin = arrayCheck.join('');
-    console.log(arrayCheck);
     digitJoin.arrayCheck;
     return true;
   } else {
@@ -65,46 +63,31 @@ function printArray(number) {
   })
   
 }
-function resetRoboger(event) {
-  document.getElementById("numberInputForm").addEventListener("submit", handleFormSubmission);
-  handleFormSubmission(event);
-}
 function clearResults() {
   let div = document.getElementById("results");
   const clearButton = document.getElementById("clearButton");
-  const reloadButton = document.getElementById("reloadButton");
+  const submitButton = document.getElementById("submit");
   div.innerText = null;
-  document.getElementById("numberInputForm").removeEventListener("submit", handleFormSubmission);
+  document.getElementById("numberInputForm").addEventListener("submit", handleFormSubmission);
   clearButton.classList.add("hidden");
-  reloadButton.classList.remove("hidden");
+  submitButton.classList.remove("hidden")
   document.querySelector("input#numberInput").value = null;
-
-
 }
 
 function handleFormSubmission(event) {
   event.preventDefault();
+  document.getElementById("numberInputForm").removeEventListener("submit", handleFormSubmission);  
   const numberInput = document.querySelector("input#numberInput").value;
-  const reloadButton = document.getElementById("reloadButton");
   const clearButton = document.getElementById("clearButton");
   const submitButton = document.getElementById("submit");
   printArray(numberInput);
   clearButton.classList.remove("hidden")
-  reloadButton.classList.add("hidden");
   submitButton.classList.add("hidden");
-  document.getElementById("numberInputForm").removeEventListener("submit", handleFormSubmission);
-  reloadButton.removeEventListener("click", resetRoboger);
-  
-  
-  
 }
 
 window.addEventListener("load", function() {
   document.getElementById("numberInputForm").addEventListener("submit", handleFormSubmission);
   clearButton.addEventListener("click", clearResults);
-  reloadButton.addEventListener("click", resetRoboger);
-  
-  
 });
 
 
