@@ -67,11 +67,17 @@ function clearResults() {
   let div = document.getElementById("results");
   const clearButton = document.getElementById("clearButton");
   const submitButton = document.getElementById("submit");
+  const inputField = document.getElementById("numberInput");
+  const inputLabel = document.getElementById("inputLabel");
+  inputField.classList.add("hidden")
+  inputLabel.classList.add("hidden")
   div.innerText = null;
   document.getElementById("numberInputForm").addEventListener("submit", handleFormSubmission);
   clearButton.classList.add("hidden");
   submitButton.classList.remove("hidden")
   document.querySelector("input#numberInput").value = null;
+  inputField.classList.remove("hidden")
+  inputLabel.classList.remove("hidden")
 }
 
 function handleFormSubmission(event) {
@@ -80,6 +86,10 @@ function handleFormSubmission(event) {
   const numberInput = document.querySelector("input#numberInput").value;
   const clearButton = document.getElementById("clearButton");
   const submitButton = document.getElementById("submit");
+  const inputField = document.getElementById("numberInput");
+  const inputLabel = document.getElementById("inputLabel");
+  inputField.classList.add("hidden")
+  inputLabel.classList.add("hidden")
   printArray(numberInput);
   clearButton.classList.remove("hidden")
   submitButton.classList.add("hidden");
